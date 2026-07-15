@@ -129,8 +129,20 @@
     font-weight:700;
     color:var(--ivory);
     letter-spacing:0.02em;
+    display:flex;
+    align-items:center;
+    gap:12px;
   }
   .logo span{ color: var(--gold); }
+
+  .logo-photo{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    object-fit:cover;
+    border:1.5px solid var(--gold);
+    flex:none;
+  }
 
   .nav-links{
     display:flex;
@@ -191,6 +203,18 @@
     background:
       radial-gradient(ellipse at 50% 0%, rgba(203,161,53,0.10), transparent 55%),
       var(--black);
+  }
+
+  .hero-photo{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--gold);
+    box-shadow: var(--shadow);
+    margin-bottom: 28px;
+    opacity:0;
+    animation: riseIn 0.8s ease forwards 0s;
   }
 
   .hero-tag{
@@ -610,7 +634,10 @@
 
 <header id="site-header">
   <nav>
-    <a href="#home" class="logo">Ashley<span>.</span></a>
+    <a href="#home" class="logo">
+      <img src="img/ashley-photo.jpg" alt="Ashley Merejildo" class="logo-photo">
+      Ashley<span>.</span>
+    </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -627,6 +654,7 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
+    <img src="img/ashley-photo.jpg" alt="Ashley Merejildo" class="hero-photo">
     <p class="eyebrow hero-tag">AI &amp; Web Developer in the Making</p>
     <h1>Ashley Merejildo<em>Precision, care, and code</em></h1>
     <p class="intro">I bring a healthcare professional's discipline to software — trained in HTML, CSS, JavaScript, GitHub, APIs, and AI tools at Pursuit's software engineering fellowship, and building products that treat people as carefully as patients.</p>
@@ -765,11 +793,11 @@
       </div>
 
       <div class="contact-links reveal">
-        <a class="contact-card" href="mailto:ashley.merejildo@example.com">
+        <a class="contact-card" href="mailto:ashley.merejildo@pursuit.org">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
-          ashley.merejildo@example.com
+          ashley.merejildo@pursuit.org
         </a>
-        <a class="contact-card" href="https://linkedin.com/in/ashleymerejildo" target="_blank" rel="noopener noreferrer">
+        <a class="contact-card" href="https://www.linkedin.com/in/ashley-merejildo-632086421/" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6ZM2 9h4v12H2zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
           LinkedIn
         </a>
@@ -831,14 +859,3 @@
 </body>
 
 </html
-.hero-photo{
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--gold);
-  box-shadow: var(--shadow);
-  margin-bottom: 28px;
-  opacity:0;
-  animation: riseIn 0.8s ease forwards 0s;
-}
